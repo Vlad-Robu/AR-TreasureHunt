@@ -1,0 +1,59 @@
+body {
+  margin: 0px;
+  overflow: hidden;
+}
+
+.unselectable {
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
+  touch-action: none;
+}
+
+.button-container {
+  position: fixed;
+  top: 70%;
+  right: 30%;
+  transform: translateX(50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+}
+
+#button-rotate-left,
+#button-rotate-right {
+  display: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: white;
+  transform-origin: center center;
+  raycaster: "objects: .clickable";
+}
+
+#button-rotate-left {
+  transform: rotate(90deg);
+}
+
+#button-rotate-right {
+  transform: rotate(-90deg);
+}
+
+#button-forward {
+  position: fixed;
+  top: 70%;
+  left: 10%;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  raycaster: "objects: .clickable";
+}
+
+
